@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+    <a th:href="@{toAdd}">新增</a>
+    <table border="1">
+        <tr>
+            <td>id</td>
+            <td>name</td>
+            <td>date</td>
+            <td>price</td>
+            <td>操作</td>
+        </tr>
+        <tr th:each="b:${list}">
+                <td th:text="${b.id}">id</td>
+                <td th:text="${b.username}">name</td>
+<!--                <td th:if="${b.gander==0}">女</td>-->
+<!--                <td th:if="${b.gander==1}">男</td>-->
+                <td th:text="${b.date}">date</td>
+                <td th:text="${b.price}">price</td>
+                <td>
+                    <a th:href="@{/delUser(id=${b.id})}">删除</a>
+                    <a th:href="@{/toUpdateUser(id=${b.id})}">修改</a>
+                </td>
+        </tr>
+    </table>
+</body>
+</html>

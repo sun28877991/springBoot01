@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<script src="../js/jquery.min.js"></script>
+<body>
+<form th:action="@{/addUser}" method="post">
+    用户名：<input type="text" name="username"/><br/>
+    性别：<input type="radio" value="0" name="gander"/>女
+    <input type="radio" value="1" name="gander"/>男<br/>
+    时间：<input type="date" name="date"/><br/>
+    价格：<input type="number" name="price"/><br/>
+    <input type="submit">
+</form>
+</body>
+</html>
